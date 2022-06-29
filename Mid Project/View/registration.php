@@ -1,5 +1,4 @@
 <?php
-session_start();
 $nameErr = $passErr = $genderErr = $roleErr = $haveErr = "";
 $name = $pass = $gender = $address = $role = "";
 $havearr[] = "";
@@ -41,6 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {        //$_SERVER["REQUEST_METHOD"] 
 	} else {
 		foreach ($_POST["have"] as $have) {
 			$havearr[] = $have;
+			$havearr[] = ",";
 		}
 	}
 
@@ -93,7 +93,7 @@ function input_data($data)
 	<input type="checkbox" name="have[]" value="Car">Car
 	<input type="checkbox" name="have[]" value="Bus">Bus
 	<input type="checkbox" name="have[]" value="Truck">Truck
-	<input type="checkbox" name="have[]" value="Driving licence">Driving license
+	<input type="checkbox" name="have[]" value="Driving-licence">Driving license
 	<input type="checkbox" name="have[]" value="None">None
 	<span class="error" style='color:red;'>* <?php echo $haveErr; ?> </span>
 	<br><br>
@@ -109,42 +109,60 @@ function input_data($data)
 
 <?php
 
-
 if (isset($_POST['subClick'])) {
 	$flag = true;
-	if ($nameErr == "")
-		$_SESSION['username'] = $name;
-	else
+	if (!$nameErr == "")
 		$flag = false;
 
-	if ($passErr == "")
-		$_SESSION['password'] = $pass;
-	else
+	if (!$passErr == "")
 		$flag = false;
 
-	if ($genderErr == "")
-		$_SESSION['gender'] = $gender;
-	else
+	if (!$genderErr == "")
 		$flag = false;
 
-	if ($roleErr == "")
-		$_SESSION['role'] = $role;
-	else
+	if (!$roleErr == "")
 		$flag = false;
 
-	if ($haveErr == "")
-		$_SESSION['sess_have'] = $havearr;
-	else
+	if (!$haveErr == "")
 		$flag = false;
 
-	$_SESSION['address'] = $address;
+	//$address;
 
-	if ($flag == true)
-		header("Location: show.php");
+	if ($flag == true) {
+
+		$current_data = file_get_contents('../Model/userdata.json');
+		$array_data = json_decode($current_data, false);
+		$f = 1;
+
+		foreach ($array_data as $b) {
+			if ($b->name == $name) {
+				$f = 0;
+			}
+		}
+
+		if ($f == 0) {
+			echo "<h3 style='color:red;'> <b>This userame already exist.</b> </h3>";
+		} else {
+			array_pop($havearr);
+			$havestring = implode(" ", $havearr);
+			$extra = array(
+				'name' => $name,
+				'pass' => $pass,
+				'gender' => $gender,
+				'role' => $role,
+				'have' => $havestring,
+				'address' => $address
+			);
+			$array_data[] = $extra;
+			$final_data = json_encode($array_data);
+			file_put_contents('../Model/userdata.json', $final_data);
+
+			echo "<h3 style='color:green;'> <b>You have sucessfully registered.</b> </h3>";
+		}
+	}
 }
 
 if (isset($_POST['logClick'])) {
 	header("Location: login.php");
 }
-
 ?>

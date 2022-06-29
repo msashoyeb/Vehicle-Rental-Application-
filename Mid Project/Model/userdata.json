@@ -1,0 +1,10 @@
+[
+  {
+    "name": "admin",
+    "pass": "admin",
+    "gender": "Other",
+    "role": "Admin",
+    "have": "None",
+    "address": "Dhaka, Bangladesh"
+  }
+]
