@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {        //$_SERVER["REQUEST_METHOD"] 
 		$gender = input_data($_POST["gender"]);
 	}
 
-	if ($_POST["role"] == "selected") {
+	if ($_POST["role"] == "Selected") {
 		$roleErr = "Please select a role";
 	} else {
 		$role = input_data($_POST["role"]);
@@ -72,29 +72,29 @@ function input_data($data)
 	<br><br>
 
 	Gender:
-	<input type="radio" name="gender" value="male"> Male
-	<input type="radio" name="gender" value="female"> Female
-	<input type="radio" name="gender" value="other"> Other
+	<input type="radio" name="gender" value="Male"> Male
+	<input type="radio" name="gender" value="Female"> Female
+	<input type="radio" name="gender" value="Other"> Other
 	<span class="error" style='color:red;'>* <?php echo $genderErr; ?> </span>
 	<br><br>
 
 	Select a role:
 	<select name="role">
-		<option value="selected">--Selected--</option>
-		<option value="customer">Customer</option>
-		<option value="driver">Driver</option>
-		<option value="owner">Car Owner</option>
+		<option value="Selected">--Selected--</option>
+		<option value="Customer">Customer</option>
+		<option value="Driver">Driver</option>
+		<option value="Owner">Car Owner</option>
 	</select>
 	<span class="error" style='color:red;'>* <?php echo $roleErr; ?> </span>
 	<br><br>
 
 	I have:
 
-	<input type="checkbox" name="have[]" value="car">Car
-	<input type="checkbox" name="have[]" value="bus">Bus
-	<input type="checkbox" name="have[]" value="truck">Truck
-	<input type="checkbox" name="have[]" value="driving licence">Driving license
-	<input type="checkbox" name="have[]" value="none">None
+	<input type="checkbox" name="have[]" value="Car">Car
+	<input type="checkbox" name="have[]" value="Bus">Bus
+	<input type="checkbox" name="have[]" value="Truck">Truck
+	<input type="checkbox" name="have[]" value="Driving licence">Driving license
+	<input type="checkbox" name="have[]" value="None">None
 	<span class="error" style='color:red;'>* <?php echo $haveErr; ?> </span>
 	<br><br>
 
