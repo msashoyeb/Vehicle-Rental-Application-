@@ -6,5 +6,37 @@
     "role": "Admin",
     "have": "None",
     "address": "Dhaka, Bangladesh"
+  },
+  {
+    "name": "driver",
+    "pass": "driver",
+    "gender": "Male",
+    "role": "Driver",
+    "have": " Driving-licence",
+    "address": "Khulna"
+  },
+  {
+    "name": "customer",
+    "pass": "customer",
+    "gender": "Female",
+    "role": "Customer",
+    "have": " None",
+    "address": "Rajshahi"
+  },
+  {
+    "name": "owner",
+    "pass": "owner",
+    "gender": "Male",
+    "role": "Owner",
+    "have": " Car , Bus , Truck",
+    "address": "Rangpur"
+  },
+  {
+    "name": "shoyeb",
+    "pass": "123456",
+    "gender": "Male",
+    "role": "Driver",
+    "have": " Bus , Truck",
+    "address": "bd"
   }
 ]

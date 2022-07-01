@@ -126,13 +126,14 @@ if (isset($_POST['subClick'])) {
 	if (!$haveErr == "")
 		$flag = false;
 
-	//$address;
+
 
 	if ($flag == true) {
 
 		$current_data = file_get_contents('../Model/userdata.json');
 		$array_data = json_decode($current_data, false);
 		$f = 1;
+
 
 		foreach ($array_data as $b) {
 			if ($b->name == $name) {
