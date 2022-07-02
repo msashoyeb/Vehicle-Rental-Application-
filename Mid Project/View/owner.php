@@ -1,3 +1,29 @@
+<h1 align="center">Car owner page</h1>
+
+<hr>
+<p align="center" style="font-family:Comic Sans MS"> Home | <a href="ownerAboutMe.php">About Me</a> | <a href="ownerChangePassword.php"> Change Password </a> | <a href="ownerAddCar.php">Add car</a> | <a href="ownerShowAllCar.php">Show all car</a> | <a href="login.php">Logout</a> </p>
+<hr>
+
 <?php
 session_start();
-echo "Welcome " . $_SESSION['user'] . " to Owner page";
+echo "<h3 style='color:green;'> Welcome " . $_SESSION['user'] . ", </h3>";
+?>
+
+<table align="center">
+    <tr>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+
+        <td>
+            <h3><u>Our goal:</u></h3>
+            Our main goal is to deliver the car <br>
+            according to the customer's demand <br>
+            and to make the service head in the <br>
+            right way. <br>
+        </td>
+
+        <td><img src="carImg.jpg" alt="" height=400 width=400 /></td>
+    </tr>
+</table>

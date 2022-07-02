@@ -22,12 +22,12 @@ echo "<h3 align='right' style='color:green;'>login as (" . $_SESSION['user'] . "
                 "<?xml version= '1.0' encoding= 'UTF-8'?>
             <driver>
                 <time>
-                    Saturday: 8 AM to 8 PM
-                    Sunday: 8 AM to 8 PM
-                    Monday: 8 AM to 8 PM
-                    Tuesday: 8 AM to 8 PM
-                    Wednesday: 8 AM to 8 PM
-                    Thursday: 8 AM to 8 PM
+                    Saturday: 8 AM to 8 PM,
+                    Sunday: 8 AM to 8 PM,
+                    Monday: 8 AM to 8 PM,
+                    Tuesday: 8 AM to 8 PM,
+                    Wednesday: 8 AM to 8 PM,
+                    Thursday: 8 AM to 8 PM,
                 </time>
             </driver>";
 
