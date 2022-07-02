@@ -1,2 +1,3 @@
 <?php
-echo "Welcome customer page";
+session_start();
+echo "Welcome " . $_SESSION['user'] . " to Driver page";

@@ -1,4 +1,5 @@
 <?php
+session_start();
 $nameErr = $passErr = "";
 $name = $pass = "";
 
@@ -32,30 +33,46 @@ function input_data($data)
 }
 ?>
 
-<h2>Login Form</h2>
+<!-- <body background="front.jpg">
+</body> -->
+<table align="center">
+	<tr>
+		<th></th>
+	</tr>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-	Username:
-	<input type="text" name="name">
-	<span class="error" style='color:red;'>* <?php echo $nameErr; ?> </span>
-	<br><br>
-	Password:
-	<input type="password" name="pass">
-	<span class="error" style='color:red;'>* <?php echo $passErr; ?> </span>
-	<br><br>
+	<tr>
+		<td>
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+				<br><br><br><br><br><br><br><br><br>
+				<h2 align="center">Login Form</h2>
+				Username:
+				<input type="text" name="name">
+				<span class="error" style='color:red;'>* <?php echo $nameErr; ?> </span>
+				<br><br>
 
-	<span class="error" style='color:red;'>* required field </span>
-	<br><br>
+				Password:
+				<input type="password" name="pass">
+				<span class="error" style='color:red;'>* <?php echo $passErr; ?> </span>
+				<br><br>
 
-	<input type="submit" name="logClick" value="Login">
-	<input type="submit" name="regClick" value="No account yet! Click to register">
-	<br><br>
-</form>
+				<span class="error" style='color:red;'>* required field </span>
+				<br><br>
+
+				<input type="submit" name="logClick" value="Login">
+				<input type="submit" name="regClick" value="No account yet! Click to register">
+				<br><br>
+			</form>
+		</td>
+	</tr>
+</table>
 
 <?php
 
+$_SESSION['user'] = $name;
 
 if (isset($_POST['logClick'])) {
+
+
 	$flag = true;
 
 	if (!$nameErr == "")
@@ -81,7 +98,7 @@ if (isset($_POST['logClick'])) {
 		}
 
 		if ($f == 0) {
-			echo "<h3 style='color:red;'> <b>This user is not found in the system.</b> </h3>";
+			echo "<h3 align='center' style='color:red;'> <b>This user is not found in the system.</b> </h3>";
 		} else {
 			if ($c_role == "Admin") {
 				header("Location: admin.php");
@@ -102,5 +119,4 @@ if (isset($_POST['logClick'])) {
 if (isset($_POST['regClick'])) {
 	header("Location: registration.php");
 }
-
 ?>

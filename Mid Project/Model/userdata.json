@@ -3,7 +3,7 @@
     "name": "admin",
     "pass": "admin",
     "gender": "Other",
-    "role": "Admin",
+    "role": "",
     "have": "None",
     "address": "Dhaka, Bangladesh"
   },
@@ -27,15 +27,15 @@
     "name": "owner",
     "pass": "owner",
     "gender": "Male",
-    "role": "Owner",
+    "role": "Customer",
     "have": " Car , Bus , Truck",
     "address": "Rangpur"
   },
   {
-    "name": "shoyeb",
-    "pass": "123456",
+    "name": "msa",
+    "pass": "1234",
     "gender": "Male",
-    "role": "Driver",
+    "role": "Admin",
     "have": " Bus , Truck",
     "address": "bd"
   }

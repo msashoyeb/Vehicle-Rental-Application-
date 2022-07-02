@@ -55,57 +55,70 @@ function input_data($data)
 }
 ?>
 
-<h2>Registration Form</h2>
+<!-- <body background="front.jpg">
+</body> -->
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+<table align="center">
+	<tr>
+		<th></th>
+	</tr>
 
-	<span class="error" style='color:red;'>* required field </span>
-	<br><br>
+	<tr>
+		<td>
 
-	Username:
-	<input type="text" name="name">
-	<span class="error" style='color:red;'>* <?php echo $nameErr; ?> </span>
-	<br><br>
-	Password:
-	<input type="password" name="pass">
-	<span class="error" style='color:red;'>* <?php echo $passErr; ?> </span>
-	<br><br>
+			<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+				<br><br><br><br><br><br>
+				<h2 align="center">Registration Form</h2>
+				<span class="error" style='color:red;'>* required field </span>
+				<br><br>
 
-	Gender:
-	<input type="radio" name="gender" value="Male"> Male
-	<input type="radio" name="gender" value="Female"> Female
-	<input type="radio" name="gender" value="Other"> Other
-	<span class="error" style='color:red;'>* <?php echo $genderErr; ?> </span>
-	<br><br>
+				Username:
+				<input type="text" name="name">
+				<span class="error" style='color:red;'>* <?php echo $nameErr; ?> </span>
+				<br><br>
+				Password:
+				<input type="password" name="pass">
+				<span class="error" style='color:red;'>* <?php echo $passErr; ?> </span>
+				<br><br>
 
-	Select a role:
-	<select name="role">
-		<option value="Selected">--Selected--</option>
-		<option value="Customer">Customer</option>
-		<option value="Driver">Driver</option>
-		<option value="Owner">Car Owner</option>
-	</select>
-	<span class="error" style='color:red;'>* <?php echo $roleErr; ?> </span>
-	<br><br>
+				Gender:
+				<input type="radio" name="gender" value="Male"> Male
+				<input type="radio" name="gender" value="Female"> Female
+				<input type="radio" name="gender" value="Other"> Other
+				<span class="error" style='color:red;'>* <?php echo $genderErr; ?> </span>
+				<br><br>
 
-	I have:
+				Select a role:
+				<select name="role">
+					<option value="Selected">--Selected--</option>
+					<option value="Customer">Customer</option>
+					<option value="Driver">Driver</option>
+					<option value="Owner">Car Owner</option>
+				</select>
+				<span class="error" style='color:red;'>* <?php echo $roleErr; ?> </span>
+				<br><br>
 
-	<input type="checkbox" name="have[]" value="Car">Car
-	<input type="checkbox" name="have[]" value="Bus">Bus
-	<input type="checkbox" name="have[]" value="Truck">Truck
-	<input type="checkbox" name="have[]" value="Driving-licence">Driving license
-	<input type="checkbox" name="have[]" value="None">None
-	<span class="error" style='color:red;'>* <?php echo $haveErr; ?> </span>
-	<br><br>
+				I have:
 
-	Address:
-	<textarea name="address" rowspan="1" colspan="1"></textarea>
-	<br><br>
-	<br><br>
+				<input type="checkbox" name="have[]" value="Car">Car
+				<input type="checkbox" name="have[]" value="Bus">Bus
+				<input type="checkbox" name="have[]" value="Truck">Truck
+				<input type="checkbox" name="have[]" value="Driving-licence">Driving license
+				<input type="checkbox" name="have[]" value="None">None
+				<span class="error" style='color:red;'>* <?php echo $haveErr; ?> </span>
+				<br><br>
 
-	<input type="submit" name="subClick" value="Submit">
-	<input type="submit" name="logClick" value="Already have an account? Login">
-</form>
+				Address:
+				<textarea name="address" rowspan="1" colspan="1"></textarea>
+				<br><br>
+				<br><br>
+
+				<input type="submit" name="subClick" value="Submit">
+				<input type="submit" name="logClick" value="Already have an account? Login">
+			</form>
+		</td>
+	</tr>
+</table>
 
 <?php
 
@@ -142,7 +155,7 @@ if (isset($_POST['subClick'])) {
 		}
 
 		if ($f == 0) {
-			echo "<h3 style='color:red;'> <b>This userame already exist.</b> </h3>";
+			echo "<h3 align='center' style='color:red;'> <b>This userame already exist.</b> </h3>";
 		} else {
 			array_pop($havearr);
 			$havestring = implode(" ", $havearr);
@@ -158,7 +171,7 @@ if (isset($_POST['subClick'])) {
 			$final_data = json_encode($array_data);
 			file_put_contents('../Model/userdata.json', $final_data);
 
-			echo "<h3 style='color:green;'> <b>You have sucessfully registered.</b> </h3>";
+			echo "<h3 align='center' style='color:green;'> <b>You have sucessfully registered.</b> </h3>";
 		}
 	}
 }
