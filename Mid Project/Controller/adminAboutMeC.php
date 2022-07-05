@@ -22,21 +22,17 @@ foreach ($array_data as $b) {
 
 <table align="center">
     <tr>
-        <th></th>
+        <th><img src="profile.png" alt="" height=200 width=200></th>
     </tr>
-
-    <tr>
-
-        <td>
-            <br><br><br><br><br><br><br>
-            <?php
-            echo "Username: " . $name . "<br>";
-            echo "Password: " . $pass . "<br>";
-            echo "Gender : " . $gender . "<br>";
-            echo "Role : " . $role . "<br>";
-            echo "I have : " . $have . "<br>";
-            echo "Address : " . $address . "<br>";
-            ?>
-        </td>
+    <td>
+        <?php
+        echo "Username: " . $name . "<br>";
+        echo "Password: " . $pass . "<br>";
+        echo "Gender : " . $gender . "<br>";
+        echo "Role : " . $role . "<br>";
+        echo "I have : " . $have . "<br>";
+        echo "Address : " . $address . "<br>";
+        ?>
+    </td>
     </tr>
 </table>

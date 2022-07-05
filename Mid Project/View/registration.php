@@ -57,7 +57,8 @@ function input_data($data)
 
 <!-- <body background="front.jpg">
 </body> -->
-
+<body style="background-color:Gainsboro;">
+</body>
 <table align="center">
 	<tr>
 		<th></th>
@@ -111,10 +112,9 @@ function input_data($data)
 				Address:
 				<textarea name="address" rowspan="1" colspan="1"></textarea>
 				<br><br>
-				<br><br>
 
 				<input type="submit" name="subClick" value="Submit">
-				<input type="submit" name="logClick" value="Already have an account? Login">
+				<input type="submit" name="logClick" value="Existing an account? Login">
 			</form>
 		</td>
 	</tr>

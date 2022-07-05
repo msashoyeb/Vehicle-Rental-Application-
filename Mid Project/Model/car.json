@@ -1,4 +1,9 @@
 [
-  { "name": "Toyata", "model": "Land Cruiser", "price": "10000" },
-  { "name": "Honda", "model": "Grace", "price": "8000" }
+  {
+    "name": "Toyata",
+    "model": "Land Cruiser",
+    "price": "10000",
+    "phone": "019***"
+  },
+  { "name": "Honda", "model": "Grace", "price": "8000", "phone": "017***" }
 ]

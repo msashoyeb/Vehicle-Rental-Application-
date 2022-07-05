@@ -1,13 +1,5 @@
 [
   {
-    "name": "admin",
-    "pass": "admin",
-    "gender": "Other",
-    "role": "Admin",
-    "have": "None",
-    "address": "Dhaka, Bangladesh"
-  },
-  {
     "name": "driver",
     "pass": "driver",
     "gender": "Male",
@@ -32,19 +24,27 @@
     "address": "Rangpur"
   },
   {
-    "name": "msa",
-    "pass": "1234",
-    "gender": "Male",
+    "name": "admin",
+    "pass": "admin",
+    "gender": "Undefined",
     "role": "Admin",
-    "have": " Bus , Truck",
-    "address": "bd"
+    "have": "Nothing",
+    "address": "Not available"
   },
   {
     "name": "shoyeb",
-    "pass": "1234",
+    "pass": "shoyeb",
     "gender": "Male",
-    "role": "Owner",
-    "have": " Bus , Truck",
-    "address": "bd"
+    "role": "Customer",
+    "have": " Car , Bus",
+    "address": ""
+  },
+  {
+    "name": "msa",
+    "pass": "shoyeb",
+    "gender": "Male",
+    "role": "Customer",
+    "have": " Car , Bus",
+    "address": ""
   }
 ]

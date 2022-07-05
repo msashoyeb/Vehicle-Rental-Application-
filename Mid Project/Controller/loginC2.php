@@ -14,6 +14,11 @@ if (isset($_POST['logClick'])) {
 		$flag = false;
 
 
+	if (!empty($_POST["remember"])) {
+		setcookie("name", $name, time() + 180);
+		setcookie("pass", $pass, time() + 180);
+	}
+
 	if ($flag == true) {
 
 		$current_data = file_get_contents('../Model/userdata.json');
@@ -28,6 +33,7 @@ if (isset($_POST['logClick'])) {
 				$c_role = $b->role;
 			}
 		}
+
 
 		if ($f == 0) {
 			echo "<h3 align='center' style='color:red;'> <b>This user is not found in the system.</b> </h3>";
@@ -51,4 +57,3 @@ if (isset($_POST['logClick'])) {
 if (isset($_POST['regClick'])) {
 	header("Location: registration.php");
 }
-?>

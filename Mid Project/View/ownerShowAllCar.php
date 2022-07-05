@@ -1,5 +1,8 @@
 <h1 align="center">Car owner page</h1>
 
+<body style="background-color:Gainsboro;">
+</body>
+
 <hr>
 <p align="center" style="font-family:Comic Sans MS"> <a href="owner.php">Home</a> | <a href="ownerAboutMe.php">About Me</a> | <a href="ownerChangePassword.php"> Change Password </a> | <a href="ownerAddCar.php">Add car</a> | Show all car | <a href="login.php">Logout</a> </p>
 <hr>
@@ -26,11 +29,12 @@ echo "<h3 align='right' style='color:green;'>login as (" . $_SESSION['user'] . "
                 echo "Car name: " . $b->name . "<br>";
                 echo "Car Model : " . $b->model . "<br>";
                 echo "Per day rental price : " .  $b->price . "<br>";
+                echo "Contact for rent : " .  $b->phone . "<br>";
                 "<br>";
                 "<br>";
                 $count += 1;
             }
             ?>
         </td>
-    </tr>
+    </tr><img src="cr.PNG" align="right" alt="" width="600" height="400">
 </table>

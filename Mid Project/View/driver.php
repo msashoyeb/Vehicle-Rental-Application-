@@ -1,12 +1,18 @@
-<h1 align="center">Driver page</h1>
+<h1 align="center">...Car Driver page...</h1>
 
 <hr>
-<p align="center" style="font-family:Comic Sans MS"> Home | <a href="driverAboutMe.php">About Me</a> | <a href="driverChangePassword.php"> Change Password </a> | <a href="driverDeclareSlot.php">Declare Slot</a> | <a href="login.php">Logout</a> </p>
+<p align="center" style="font-family:Comic Sans MS"> 
+             Home | 
+    <a href="driverAboutMe.php">About Me</a> | 
+    <a href="driverChangePassword.php"> Change Password </a> | 
+    <a href="driverDeclareSlot.php">Declare Available Slot</a> | 
+    <a href="login.php">Logout</a> </p>
 <hr>
+
 
 <?php
 session_start();
-echo "<h3 style='color:green;'>Welcome " . $_SESSION['user'] . ", </h3>";
+echo "<h3 style='color:green;'> Welcome " . $_SESSION['user'] . " to Car Driver Page... </h3>";
 ?>
 
 <table align="center">
@@ -17,13 +23,16 @@ echo "<h3 style='color:green;'>Welcome " . $_SESSION['user'] . ", </h3>";
     <tr>
 
         <td>
-            <h3><u>Our goal:</u></h3>
-            Our main goal is to deliver the car <br>
-            according to the customer's demand <br>
-            and to make the service head in the <br>
-            right way. <br>
+            <h3><u>About Driver:</u></h3>
+            Well-trained drivers can make the road safe for everyone.<br> 
+            Aside from that, they also make a good value for businesses <br> 
+            and organizations alike. Having up-to-date knowledge on <br>
+            road safety can help prevent the dangers of the road and <br>
+            save the business from damages and liabilities.
+     
+
         </td>
 
-        <td><img src="carImg.jpg" alt="" height=400 width=400 /></td>
+        <td><img src="driver.jpg" alt="" height=300 width=350 /></td>
     </tr>
 </table>

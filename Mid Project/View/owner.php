@@ -1,3 +1,6 @@
+<body style="background-color:Gainsboro;">
+</body>
+
 <h1 align="center">Car owner page</h1>
 
 <hr>
@@ -17,13 +20,13 @@ echo "<h3 style='color:green;'> Welcome " . $_SESSION['user'] . ", </h3>";
     <tr>
 
         <td>
-            <h3><u>Our goal:</u></h3>
-            Our main goal is to deliver the car <br>
-            according to the customer's demand <br>
-            and to make the service head in the <br>
-            right way. <br>
+            <h2><u>Main motive:</u></h2>
+            We are willing to make ease people's<br>
+            suffering regarding transportation system.<br>
+            For this reason we are vowing to complete our <br>
+            service in a proper and effective way.<br>
         </td>
 
-        <td><img src="carImg.jpg" alt="" height=400 width=400 /></td>
+        <td><img src="5.PNG" align="" alt="" width="700" height="400">
     </tr>
 </table>
