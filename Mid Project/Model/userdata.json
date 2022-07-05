@@ -30,21 +30,5 @@
     "role": "Admin",
     "have": "Nothing",
     "address": "Not available"
-  },
-  {
-    "name": "shoyeb",
-    "pass": "shoyeb",
-    "gender": "Male",
-    "role": "Customer",
-    "have": " Car , Bus",
-    "address": ""
-  },
-  {
-    "name": "msa",
-    "pass": "shoyeb",
-    "gender": "Male",
-    "role": "Customer",
-    "have": " Car , Bus",
-    "address": ""
   }
 ]
